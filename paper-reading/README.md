@@ -38,13 +38,13 @@ The customized skill defaults to offline HTML notes and maintains a project-loca
 
 ## 本地命令 / Local commands
 
-复制完整技能文件夹后，先运行对应系统的程序并读取内置指南。
-After copying the complete skill folder, run the executable for your system and read its bundled guide first.
+复制完整技能文件夹后，先运行对应系统程序的 version 命令，再读取本目录的 SKILL.md 和 references、assets 中的普通文件。
+After copying the skill folder, check the runtime with version and read the local SKILL.md, references, and assets.
 
 ```powershell
-& "<skill-root>/norman-paper-reading.exe" guide
-& "<skill-root>/norman-paper-reading.exe" list
-& "<skill-root>/norman-paper-reading.exe" read references/reading-workflow.md
+& "<skill-root>/norman-paper-reading.exe" version
+& "<skill-root>/norman-paper-reading.exe" extract --help
+& "<skill-root>/norman-paper-reading.exe" render --help
 ```
 
 | 命令 / Command | 中文用途 | English use |
@@ -63,6 +63,15 @@ The skill’s local executable supports Windows x64 and macOS on Apple Silicon o
 ### 作者与许可
 
 作者：小红书 **N同学**；抖音 / B站 **耐心的N同学**。
+
+## 输出检查
+
+本包提供已清理的本地工作流、阅读模板和配置模板。程序内嵌指南属于旧实现，当前任务按 SKILL.md 和本地资源执行。最终 HTML 直接构建，交付前对实际笔记运行署名检查。
+
+```sh
+python scripts/check_output.py /path/to/reading-note.html /path/to/reading-note.md
+python -m unittest discover -s tests -v
+```
 
 ## 来源
 

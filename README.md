@@ -100,6 +100,8 @@ chmod +x norman-paper-reading-macos-arm64
 
 发布前检查技能格式、相对引用、个人路径残留、链接文件及二进制一致性，并在独立副本中运行 Windows 辅助程序和内嵌资源读取。每篇论文的科学判断与 HTML 页面仍需在实际阅读任务中按技能要求核验。
 
+当前包提供本地工作流、报告结构、阅读模板及配置模板，正常阅读流程读取这些普通文件。辅助程序的 version、extract 和 render 用于运行检查及 PDF 处理。每次交付前运行 scripts/check_output.py 检查实际笔记中的旧署名，回归测试覆盖 Markdown、HTML、英文、中文及学术引用保留情况。
+
 ## 第三方来源说明
 
 本项目对 Norman Paper Reading 的阅读规则进行定制，并随包保留其 Windows 与 macOS 辅助程序及作者归属。frontend-design 副本随附 Apache-2.0 许可证。各组件的来源和许可记录见 [第三方说明](THIRD_PARTY_NOTICES.md)。

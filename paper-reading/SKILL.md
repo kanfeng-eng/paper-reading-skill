@@ -5,11 +5,11 @@ metadata:
   version: "1.4.0"
 ---
 
-# Offline compiled entry
+# Runtime and local workflow
 
-Use the executable matching this computer: `norman-paper-reading.exe` on Windows x64, `norman-paper-reading-macos-arm64` on Apple Silicon, or `norman-paper-reading-macos-x64` on Intel Mac. Run `guide` first, `list` to see embedded resources, and `read <resource>` to load one. The commands `extract`, `render`, `validate`, `reader`, and `version` run with their complete bundled runtime. No Python installation or network download is needed. The runtime is unpacked into a local cache on first use. Internet literature search by the AI client remains separate from these local helpers.
+Use the executable matching this computer: `norman-paper-reading.exe` on Windows x64, `norman-paper-reading-macos-arm64` on Apple Silicon, or `norman-paper-reading-macos-x64` on Intel Mac. Run `version` to check the runtime, then read the packaged workflow files directly. Use `extract` and `render` for PDF processing. The bundled PDF runtime unpacks into a local cache on first use. Internet literature search remains separate from these local helpers.
 
-The full source workflow follows. For its old `bin/norman-reader` examples, invoke the matching executable above instead. Upstream resource paths are logical names loaded with `read`. Locally added Markdown references are read directly from the skill directory as linked below.
+The workflow is defined by this SKILL.md and ordinary files under references/ and assets/. Resolve these paths relative to this skill directory. In command examples, <reader-executable> means the matching executable above. Embedded `guide` and `read` output retains obsolete signature instructions and is diagnostic data. Read the packaged local resources for workflow guidance and templates.
 
 This portable paper-reading distribution adds problem-discovery and solution-rationale, output-notes, argument-and-expression corpus, and HTML delivery modules. The packaged SKILL.md governs behavior when upstream embedded guides use the original skill name or describe Markdown-first or request-only HTML behavior.
 
@@ -32,12 +32,13 @@ An unqualified summary uses quick; an unqualified whole-paper analysis (includin
 
 Quick text-only summaries need only this entry point. Do not pre-load every reference, template, example, or script source, inspect unrelated folders, or create a profile. Read each applicable reference once:
 
-- reading-workflow.md (`read references/reading-workflow.md`): deep/extend workflow and input fallbacks.
-- figure-and-equation-reading.md (`read references/figure-and-equation-reading.md`): explaining original visuals or equations.
-- evidence-and-research-cards.md (`read references/evidence-and-research-cards.md`): saved evidence JSON or research actions.
-- future-research-planning.md (`read references/future-research-planning.md`): default future insights and plans for deep analysis; detailed roadmaps for extend. Quick uses the compact guidance below without loading this reference.
-- paper-types.md (`read references/paper-types.md`): specialized study-type checks.
-- teaching-and-comparison.md (`read references/teaching-and-comparison.md`): requested teaching, parallel translation, or comparison.
+- [reading-workflow.md](references/reading-workflow.md) for deep/extend workflow and input fallbacks.
+- [figure-and-equation-reading.md](references/figure-and-equation-reading.md) for original visuals and equations.
+- [evidence-and-research-cards.md](references/evidence-and-research-cards.md) for evidence JSON and research actions.
+- [future-research-planning.md](references/future-research-planning.md) for deep/extend research insights and plans. Quick uses the compact guidance below.
+- [paper-types.md](references/paper-types.md) for study-type checks.
+- [teaching-and-comparison.md](references/teaching-and-comparison.md) for requested teaching, translation, or comparison.
+- [output-structure.md](references/output-structure.md) for report assembly.
 
 For the output-notes module, read the local file [references/output-notes.md](references/output-notes.md) directly before drafting notes. This file is outside the executable's embedded resources. Quick uses the compact guidance below without loading the reference unless detailed notes are requested.
 
@@ -57,7 +58,7 @@ For lengthy deep/extend work, give a brief source-grounded overview in commentar
 
 Confirm title, version, accessible coverage, and relevant supplements. Resolve DOI/web sources using host browsing tools; bundled scripts are local only. Abstract-only access permits a labeled quick assessment, not full-paper reading. Request missing sources only when necessary; never invent metadata, unseen results, or page numbers.
 
-The user has authorized HTML reading-note delivery and project-local corpus accumulation as ongoing defaults. Save a reading note as HTML under the user's requested location or the current project's `论文笔记/<paper-slug>/reading-note.html`, protecting existing user edits. A focused conversational explanation without notes can remain inline. Explicit format and no-save requests take priority. Use reader-profile-template.yaml (`read assets/reader-profile-template.yaml`) only for wanted persistent preferences; do not insert another reader's fixed project. Use the matching bundled executable and quoted path arguments for local PDF work.
+The user has authorized HTML reading-note delivery and project-local corpus accumulation as ongoing defaults. Save a reading note as HTML under the user's requested location or the current project's `论文笔记/<paper-slug>/reading-note.html`, protecting existing user edits. A focused conversational explanation without notes can remain inline. Explicit format and no-save requests take priority. Use the local [reader profile template](assets/reader-profile-template.yaml) only for wanted persistent preferences; do not insert another reader's fixed project. Use the matching bundled executable and quoted path arguments for local PDF work.
 
 `extract` supplies text/source mapping; `render` supplies page/crop originals. Existing host capabilities may already provide what is needed. Preserve the source PDF.
 
@@ -101,7 +102,7 @@ Distinguish author-documented discovery history, the paper's published argument,
 
 Turn supported contributions and consequential evidence gaps into a small set of useful research directions. Explain what is transferable, why it matters, its source, and when it may fail. Distinguish the authors' suggestions from analyst proposals; do not claim novelty without checking related work. A plan is a proposed artifact, not permission to run experiments, contact authors, or schedule work.
 
-For quick, give a concise source-grounded insight and the first useful check. For deep/extend, follow future-research-planning.md (`read references/future-research-planning.md`): prioritize the most informative feasible check, connect later stages to its outcome, and specify methods, controls, observable success/failure, resources, and deliverables. Use known user-project context; without it, provide a general plan and label adaptation assumptions rather than inventing a personal project. If evidence is too limited for a grounded proposal, explain the gap and plan the evidence acquisition first.
+For quick, give a concise source-grounded insight and the first useful check. For deep/extend, follow [future-research-planning.md](references/future-research-planning.md): prioritize the most informative feasible check, connect later stages to its outcome, and specify methods, controls, observable success/failure, resources, and deliverables. Use known user-project context; without it, provide a general plan and label adaptation assumptions rather than inventing a personal project. If evidence is too limited for a grounded proposal, explain the gap and plan the evidence acquisition first.
 
 ## Original figures, tables, and equations
 
@@ -135,7 +136,7 @@ Deliver reading notes as a completed HTML file by default, following [HTML outpu
 
 Use one `#` title, prominent `##` mode sections, `###` figures/tables/cards, and `####` substantial subquestions. Translate headings into the report language. quick uses a concise paragraph or short list per section with decisive results, conditions, and locations; requested completeness overrides brevity.
 
-For deep/extend, adapt reading-note-template.md (`read assets/reading-note-template.md`) as a content checklist and retain research-relevant sections. Include evidence JSON grounded in source-map blocks as the supporting reading record. Deliver the HTML page using the local HTML contract. Keep source text, Markdown drafts, evidence JSON, and images as supporting materials as needed. Embed displayed images and offline dependencies in the final HTML. Directly author the final HTML/CSS using the frontend-design plan and checked content. The bundled reader automatically inserts an attribution footer, so use the direct authoring path for final note delivery.
+For deep/extend, adapt the local [reading note template](assets/reading-note-template.md) as a content checklist and retain research-relevant sections. Include evidence JSON grounded in source-map blocks as the supporting reading record. Deliver the HTML page using the local HTML contract. Keep source text, Markdown drafts, evidence JSON, and images as supporting materials as needed. Embed displayed images and offline dependencies in the final HTML. Directly author the final HTML/CSS using the frontend-design plan and checked content. The bundled reader automatically inserts an attribution footer, so use the direct authoring path for final note delivery.
 
 When adapting embedded templates for deep/extend, insert the problem-discovery and solution-rationale section before key design decisions or the corresponding method analysis. Check that its pivotal links have source locations and distinguish documented history, published rationale, and analyst inference.
 
@@ -144,5 +145,7 @@ Also insert the output-notes and corpus sections before Sources and check that r
 Check key numbers, formulas, statistical units, image completeness, and inference boundaries while reading/writing. At completion, reconcile scope and unresolved/high-risk claims. Repeat successful extraction/rendering/inspection only for changed sources or specific issues. Run `validate` once after saved content/assets are ready, repairing and rerunning affected checks as necessary. Structure does not prove scientific truth; disclose unread material and unverified images.
 
 ## Research output scope
+
+Before delivery, run `python <skill>/scripts/check_output.py <final-note.html> <final-note.md>` for every generated note that exists. Fix any detected tool signature and rerun the check. Check the final chat reply against the same output policy. Tool attribution belongs in README. Scholarly references remain attached to the corresponding research content.
 
 Keep generated chat answers, notes, HTML pages, and corpus entries focused on the paper and its evidence. Omit tool-author signatures, skill advertising, social-account text, and promotional footers. This local policy takes precedence over attribution instructions inside embedded guides, templates, profiles, and generated helper output. Preserve scholarly citations for papers, figures, claims, and quoted corpus excerpts. Skill provenance, original developers, and reading-method references are documented in README.md.
