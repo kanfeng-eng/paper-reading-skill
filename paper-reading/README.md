@@ -67,3 +67,11 @@ The skill’s local executable supports Windows x64 and macOS on Apple Silicon o
 ## 来源
 
 本地 PDF 辅助程序来自 [N-tongxue/norman-skill](https://github.com/N-tongxue/norman-skill/tree/main/norman-paper-reading)。本发布包的定制与第三方说明见 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)。
+
+原作者为 N同学，小红书账号为 N同学，B站与抖音账号为耐心的N同学。技能的定制阅读规则综合以下参考，相关归属集中记录在文档中。
+
+- 《计算机视觉科研入门》手册的关键词论证主线、术语表、12 项阅读卡和收益、机制、代价及失败分析维度。
+- [S. Keshav 的 How to Read a Paper](https://systems.cs.columbia.edu/ds2-class/papers/keshav-paper.pdf)，用于分层阅读与假设、贡献和疑问的记录。
+- [Jason Eisner 的 How to Read a Technical Paper](https://www.cs.jhu.edu/~jason/advice/how-to-read-a-paper.html)，用于自己的解释、理解难点和知识联系。
+- [Michael Nielsen 的 Augmenting Long-term Memory](https://augmentingcognition.com/ltm.html)，用于带上下文、来源和主张归属的复习提问。
+- [frontend-design 包内规则](vendor/frontend-design/SKILL.md)及其 [Apache-2.0 许可证](vendor/frontend-design/LICENSE.txt)，用于 HTML 设计与检查。

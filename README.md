@@ -62,6 +62,8 @@ HTML 笔记默认保存在当前论文任务的项目目录中。
 
 页面内嵌样式、必要脚本和展示图片，核心内容可离线阅读。参考答案可逐项展开，重要结论和局限直接可见。语料累计文件用于跨论文维护，HTML 展示本次收录内容，稳定编号便于引用。用户明确指定其他格式、目录或仅在聊天中回答时，按实际请求执行。
 
+笔记和聊天输出聚焦论文及证据，技能作者、工具来源和阅读方法的归属集中记录在 README。论文、图表、科学主张和语料摘录的学术引用保留在相应内容旁。最终 HTML 通过 frontend-design 指导直接构建。
+
 ## 包内文件与可移植性
 
 ```text
@@ -104,7 +106,7 @@ chmod +x norman-paper-reading-macos-arm64
 
 ## 参考与来源
 
-1. [N同学的 Norman Paper Reading](https://github.com/N-tongxue/norman-skill/tree/main/norman-paper-reading)，提供基础阅读工作流与本地 PDF 辅助程序。
+1. [N同学的 Norman Paper Reading](https://github.com/N-tongxue/norman-skill/tree/main/norman-paper-reading)，提供基础阅读工作流与本地 PDF 辅助程序。原作者为 N同学，小红书账号为 N同学，B站与抖音账号为耐心的N同学。paper-reading 在其基础上定制了问题发现与解法分析、笔记、语料库和 HTML 输出规则。
 2. 研究入门手册《计算机视觉科研入门》，提供关键词论证主线、术语表、12 项阅读卡以及收益、机制、代价和失败分析维度。相关结构已提炼到包内规则。
 3. [S. Keshav 的 How to Read a Paper](https://systems.cs.columbia.edu/ds2-class/papers/keshav-paper.pdf)，提供分层阅读与假设、贡献、疑问记录方法。
 4. [Jason Eisner 的 How to Read a Technical Paper](https://www.cs.jhu.edu/~jason/advice/how-to-read-a-paper.html)，提供面向未来自己的解释、理解难点和知识联系方法。
