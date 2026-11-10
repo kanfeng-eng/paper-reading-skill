@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.env
+.env.*
+论文笔记/
+语料库/
