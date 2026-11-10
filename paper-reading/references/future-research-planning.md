@@ -2,9 +2,9 @@
 
 ## Scope and depth
 
-Whole-paper deep analysis includes separate **Future research insights** and **Next-step research plan** sections by default. Extend develops these into action cards and a staged roadmap tailored to the known project. Quick includes one compact insight and first check when useful, without requiring this reference. Explicit summary-only requests and focused figure/equation explanations keep their requested scope.
+In guided deep/extend reading, develop future research insights and the next-step plan in conversation before final note consolidation. Introduce one grounded direction at a useful point, listen to the learner's interpretation, and refine it with their actual goals and constraints. Explicit direct-output requests may instead receive labeled AI proposals.
 
-Use the evidence already checked in the reading. A plan should help the reader choose and begin useful work, not merely repeat the discussion's future-work paragraph. When source access is limited, label the directions provisional and prioritize obtaining the missing evidence. No project questionnaire is required before an initial useful plan.
+Use checked evidence and the learner's actual responses. Identify author suggestions, AI proposals, learner ideas, revisions, accepted priorities, rejected routes, and unresolved assumptions. In final notes, consolidate the discussion faithfully and mark topics that were skipped or not discussed.
 
 ## Future research insights
 
@@ -20,7 +20,7 @@ Avoid generic recommendations such as “use more data,” “combine AI,” or 
 
 ## Next-step research plan
 
-Lead with the highest-priority action and why it should come first. Rank actions using their expected information value, prerequisites, cost, and feasibility. Link substantive actions to A IDs and checked evidence. A compact deep plan can use a table:
+In dialogue, compare candidate first actions with the learner using information value, prerequisites, cost, and feasibility. Ask about a resource constraint only when it changes the choice. In final notes, state the resulting priority and rationale, including remaining disagreement or unknowns. Link actions to A IDs and checked evidence. A planning table can use:
 
 | Priority / stage | Question and hypothesis | Method and comparison | Deliverable | Decision and next step |
 |---|---|---|---|---|
@@ -49,12 +49,12 @@ These are adaptable stages, not mandatory three-part filler. In deep, a compact 
 
 ## Project fit and evidence boundaries
 
-Use supplied project goals, datasets, skills, and resource constraints when available. Otherwise label the output **General research plan; project adaptation assumptions** and state the few conditions that matter. Do not infer the user's affiliation, current experiments, equipment access, or project from the paper authors or filenames. Optional clarification may improve later tailoring but must not block a grounded general plan.
+Use known project goals, datasets, skills and constraints. In guided discussion, ask about a missing condition when it changes the proposed test, then refine with the learner. Otherwise label a proposal as general and keep adaptation assumptions explicit. Do not infer user resources, experiments or affiliations from paper authors or filenames.
 
 Preserve the paper's original sample unit and validation setting. Model-generated labels call for independent measurements when the goal is real-world accuracy; association-based findings call for suitable causal or mechanistic evidence when the proposed claim is causal. Adapt checks to the study type rather than applying every possible control.
 
 ## Deliver and check
 
-In Chinese reports, normally use **未来研究启示** and **下一步研究规划**; a detailed extend roadmap may use **分阶段研究路线图**. Explain findings once in the analysis and cross-reference them here. Keep the first action explicit and distinguish recommendations from completed work.
+During dialogue, use the headings 未来研究启示 and 下一步研究规划 when helpful, and summarize their actual development in the final note. Preserve the question, evidence, alternatives, user input, revision, test, controls, supporting/weakening outcomes, and next decision. Keep assumptions visible and distinguish planned work from completed experiments.
 
 For saved deep/extend notes, record substantive proposals in `actions[]` using the existing action schema. Optional `priority`, `phase`, `dependencies`, `deliverable`, and `milestone` fields can retain planning details. If no grounded action is possible, record `action_status` and explain what evidence must be obtained first. Check that each proposal is traceable, feasible under its stated conditions, and has an observable outcome; structural validation does not establish scientific novelty or feasibility.

@@ -1,6 +1,6 @@
 ---
 name: paper-reading
-description: Summarize or closely read scientific papers, reconstruct problem discovery and solution rationale, inspect evidence, produce HTML notes with frontend-design, and collect argument patterns and precise expressions. Offline Windows and Mac helpers are embedded.
+description: Guide scientific-paper reading through adaptive dialogue, discuss research ideas and writing examples with the learner, and consolidate detailed HTML notes with figure-only crops after reading.
 metadata:
   version: "1.4.0"
 ---
@@ -15,9 +15,17 @@ This portable paper-reading distribution adds problem-discovery and solution-rat
 
 # paper-reading
 
-Explain the research storyline, evidence boundaries, and what the reader can do next. Whole-paper analysis normally includes future research insights and a prioritized next-step plan, not only a summary or list of limitations. Follow the user's language, scope, and delivery location; English instructions do not require English reports. Use Chinese only when language cannot otherwise be inferred or configured. Start from the supplied paper without a questionnaire; use relevant known background or assume research experience with limited familiarity with this field.
+Guide the learner through the research storyline, method, evidence, and boundaries in dialogue. Develop research insights, next-step plans, and argument/expression examples with the learner during reading, then consolidate detailed HTML notes after the agreed reading scope is complete. Follow the user's language and adapt to known background, using only necessary prerequisite explanations.
 
-## Choose the mode
+## Guided-first interaction
+
+Read [guided-reading.md](references/guided-reading.md) before starting a paper. Default to mentor-led dialogue for reading, close reading, or analysis requests. Locate a small source unit, explain necessary context, ask one consequential question in the final reply, and end the turn for the user's response. Use their response to choose feedback, hints, explanation, or the next unit. Depth is independent of interaction style. Generate final notes after the agreed reading and discussion are complete, or a clearly labeled partial note when explicitly requested. An explicit request for a direct summary or report can use batch delivery.
+
+The reusable [guided-reading prompt](assets/guided-reading-prompt.md) states the learner-facing workflow. During guided reading, distinguish teacher preparation, material actually discussed, and demonstrated learner understanding. Preserve discussion-derived ideas and corpus-entry states for final consolidation.
+
+## Choose the depth
+
+The table describes eventual note coverage. It does not replace the default stepwise reading dialogue.
 
 | Intent | Mode | Major report headings |
 |---|---|---|
@@ -26,11 +34,11 @@ Explain the research storyline, evidence boundaries, and what the reader can do 
 | Reproduce, apply to my project, future research planning | extend | Necessary deep evidence; Problem discovery and solution rationale; Future research insights; Transfer conditions; Reproduction checklist; Research action cards; Prioritized research roadmap; Output notes; Argument and expression corpus; Sources |
 | One figure, equation, or passage | focused | Requested item; Necessary context; Explanation; Evidence boundary |
 
-An unqualified summary uses quick; an unqualified whole-paper analysis (including “分析这篇文章”) or close reading uses deep. Include a compact insight and next step in quick, and distinct future-insights and research-plan sections in deep. Explicit research planning uses extend. Respect requests for summary only, no extensions, or strict brevity; focused explanations do not automatically acquire a whole-paper plan. Preserve explicit or established mode/coverage in follow-ups. Speed changes execution, not requested completeness. Guided reading, full parallel translation, and paper comparison are additions only on request. General literature discovery and unspecified field reviews do not trigger full close reading.
+Use quick for an explicit brief summary, deep for close reading, and extend for application or reproduction planning. Unqualified reading/analysis starts guided dialogue at the selected depth. An explicit direct-output request can use batch delivery. Follow explicit exclusions and scope. Full translation and comparison remain optional additions. A request to continue reading advances from the actual discussion state rather than generating a report.
 
 ## Fast start and selective loading
 
-Quick text-only summaries need only this entry point. Do not pre-load every reference, template, example, or script source, inspect unrelated folders, or create a profile. Read each applicable reference once:
+Load the guided-reading reference for the interaction protocol and the topic-specific resources needed for the current unit. Explicit quick summaries can use the entrypoint alone. Keep frontend-design and final-note assembly for the consolidation stage.
 
 - [reading-workflow.md](references/reading-workflow.md) for deep/extend workflow and input fallbacks.
 - [figure-and-equation-reading.md](references/figure-and-equation-reading.md) for original visuals and equations.
@@ -48,17 +56,17 @@ Before producing reading notes in any mode, read [references/html-output.md](ref
 
 Reuse extracted text, source maps, inspected images, and evidence only after checking source identity/version, fingerprint where available, and coverage. File existence proves neither freshness nor inspection. Process missing/changed material and keep stable IDs. Extract required PDF coverage once; locate passages from text/source maps rather than repeatedly dumping the full extraction. quick/focused can use selected pages; whole-paper deep requires the relevant full main text.
 
-Batch independent reads/tools where supported, keeping dependencies sequential. Batch known figure pages in one render at default 144 DPI; use a readable, inspected full-page original before spending time on crops. Render only needed pages; increase DPI/crop to solve an actual readability issue. Do not export all embedded images or render every text-readable page by default.
+Batch independent source-preparation tools where useful. Full-page renders are internal locating material. Crop each delivered figure/table to its actual region, preserving scientific context. Inspect the crop itself, enlarge unreadable labels when needed, and keep unrelated page text outside the delivered image. Never use an entire paper page as the final note's figure.
 
 Use the supplied source before external searches. Read supplements or code when they affect the requested conclusion, not as a universal startup task. Broader novelty searches, repository audits, unrelated OCR, full translation, and reproduction runs require a task need or request.
 
-For lengthy deep/extend work, give a brief source-grounded overview in commentary once sufficient text is read: question, approach, main reported result, and scope. Label results not yet visually checked as author-reported. Continue the required analysis in the same task without waiting for confirmation; the overview is not completion. Do not delay it for image refinement, JSON serialization, or HTML packaging.
+For guided work, give only the current reading unit and necessary context, then end the turn for the learner's substantive response. A source overview is an orientation aid. Keep final-note generation gated on discussion completion. For explicit batch delivery, report progress while continuing the requested analysis.
 
 ## Sources and workspace
 
 Confirm title, version, accessible coverage, and relevant supplements. Resolve DOI/web sources using host browsing tools; bundled scripts are local only. Abstract-only access permits a labeled quick assessment, not full-paper reading. Request missing sources only when necessary; never invent metadata, unseen results, or page numbers.
 
-The user has authorized HTML reading-note delivery and project-local corpus accumulation as ongoing defaults. Save a reading note as HTML under the user's requested location or the current project's `论文笔记/<paper-slug>/reading-note.html`, protecting existing user edits. A focused conversational explanation without notes can remain inline. Explicit format and no-save requests take priority. Use the local [reader profile template](assets/reader-profile-template.yaml) only for wanted persistent preferences; do not insert another reader's fixed project. Use the matching bundled executable and quoted path arguments for local PDF work.
+HTML note delivery is authorized after the agreed reading/discussion scope is complete. Save under the requested location or `论文笔记/<paper-slug>/reading-note.html`. During dialogue, keep source-preparation and evidence records as needed; save a persistent learning log only when requested. Respect explicit mid-reading note, direct-output, format, and no-save requests, labeling partial coverage. Use the local [reader profile template](assets/reader-profile-template.yaml) for wanted preferences.
 
 `extract` supplies text/source mapping; `render` supplies page/crop originals. Existing host capabilities may already provide what is needed. Preserve the source PDF.
 
@@ -100,13 +108,13 @@ Distinguish author-documented discovery history, the paper's published argument,
 
 ## Future research insights and planning
 
-Turn supported contributions and consequential evidence gaps into a small set of useful research directions. Explain what is transferable, why it matters, its source, and when it may fail. Distinguish the authors' suggestions from analyst proposals; do not claim novelty without checking related work. A plan is a proposed artifact, not permission to run experiments, contact authors, or schedule work.
+Use the checked evidence to open a research discussion with the learner at relevant results or limitations. Trace a gap to a transferable hypothesis, debate conditions, and refine the smallest informative test using the learner's responses. Mark author suggestions, AI proposals, user ideas, revisions, acceptance, rejection, and unresolved points.
 
-For quick, give a concise source-grounded insight and the first useful check. For deep/extend, follow [future-research-planning.md](references/future-research-planning.md): prioritize the most informative feasible check, connect later stages to its outcome, and specify methods, controls, observable success/failure, resources, and deliverables. Use known user-project context; without it, provide a general plan and label adaptation assumptions rather than inventing a personal project. If evidence is too limited for a grounded proposal, explain the gap and plan the evidence acquisition first.
+Follow [future-research-planning.md](references/future-research-planning.md) for evidence-grounded controls, resources, outcomes, and next decisions. In guided work, form these in conversation first and consolidate their actual status in the final notes. Mark undiscussed topics as undiscussed. An explicit batch request may include clearly labeled AI proposals.
 
 ## Original figures, tables, and equations
 
-Every individually explained figure/table gets its **original image directly below its heading**, before analysis, plus source locator and panel coverage. Inspect a full page before cropping. Preserve panels, axes/units, legends, scale bars, annotations, captions, table headers/footnotes, and multipage parts. Recreated charts are not originals. If an image cannot be obtained or viewed, disclose that locally; rendering alone is not verification.
+Every individually explained figure/table gets its inspected original figure-region crop or original standalone image directly below its heading, plus source locator and panel coverage. A full page can be inspected internally to locate the region. Deliver only the figure/table itself with all relevant panels, axes, units, legends, annotations, caption, headers and footnotes. Split large tables into ordered readable crops. If cropping is unavailable or uncertain, disclose the missing crop and give the source location; do not fall back to embedding a whole paper page.
 
 For figures: why → method → reading cues → observations → support/boundary → next question. Cover relevant panels and explain omissions; group repetitive panels with explicit coverage. Use compact explanations for simple items and detail for decisive ones.
 
@@ -116,15 +124,15 @@ For necessary equations: purpose, symbols/units, operations, intuition, assumpti
 
 ### Argument and expression corpus / 论证与表达语料库
 
-During deep/extend reading, collect a small set of source-verified examples of effective reasoning and precise wording. Follow the local [corpus guidance](references/argument-expression-corpus.md). Explain how keywords and logical relations build the argument, why a particular expression is precise, and when the pattern can be reused. Keep original excerpts, Chinese explanations, logical reconstructions, and analyst-authored templates explicitly identified.
+During reading, bring selected source-verified argument patterns and precise expressions into the conversation. Invite the learner to interpret the function or try a rewrite, then explain and refine the pattern together. Follow the local [corpus guidance](references/argument-expression-corpus.md). Track candidate, discussed, revised, and agreed states, and identify the origin of each interpretation.
 
-Present selected entries or a concise summary of newly added entries in the HTML after output notes and before Sources. By the user's corpus setup request, accumulate verified entries in the current research project's `语料库/论证与表达.md`, reusing an established corpus path when available. The cumulative Markdown corpus and the HTML reading-note deliverable serve separate storage roles. Respect explicit chat-only or no-save requests. With no identified writable research project, deliver available entries inline and report the storage limitation. Quick/focused adds this module when requested and uses only the inspected material.
+Consolidate conversation-derived entries and their actual states in the final HTML, with stable IDs. Accumulate reviewed entries in the project's `语料库/论证与表达.md` when saving is authorized. Preserve user edits and scholarly sources. Topics skipped in discussion stay explicitly unreviewed. Respect explicit chat-only/no-save requests.
 
 Before saving, check source identity/version, quotation accuracy, context and claim strength, deduplication, and preservation of user edits. Record the selected passage's writing quality separately from the scientific support for its claim.
 
 ### Output notes / 输出笔记
 
-After whole-paper deep/extend analysis, include a concise "输出笔记" section before Sources. Follow the local [output-notes guidance](references/output-notes.md) to distill reviewed material for later recall. An explicit notes-only request delivers the notes directly using the available reading coverage. For quick, end with a few compact takeaways covering the question, core idea, decisive evidence or boundary, and an unresolved question when relevant. Focused explanations add notes only when requested. Respect explicit format, brevity, and exclusions.
+After guided reading and discussion are complete, consolidate a detailed, independently readable HTML note using [output-notes.md](references/output-notes.md). Preserve the full reasoning, important questions, learner misconceptions and corrections, method/derivation details, cropped figures, evidence, and discussion-derived plans and corpus entries. A short recap can lead the page, followed by the detailed exposition. Explicit quick/direct or partial-note requests keep their stated scope.
 
 Prioritize the problem and contribution, discovery-to-solution reasoning, essential mechanism, evidence with conditions, meaningful connections, limitations, and reusable insights. Separate ideas worth remembering from details retained for lookup and unresolved claims. Detailed notes include a small set of recall questions with separate, source-linked reference answers. Treat the generated note as an AI-prepared study aid and base any claim about the user's understanding on their actual responses.
 

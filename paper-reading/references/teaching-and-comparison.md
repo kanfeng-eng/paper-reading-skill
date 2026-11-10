@@ -2,9 +2,7 @@
 
 ## Guided reading
 
-Explain the problem and minimal background, then start with one consequential question. Ask one at a time and choose hints/follow-ups from the answer; if the user wants direct explanation, provide it. Move from factual understanding to mechanisms/assumptions and transfer. At the end, ask the reader to reconstruct question — design — evidence — boundary; stop when it is understood.
-
-Record obstacles that actually affect understanding. Reuse terminology and Q IDs rather than repeating whole introductory explanations. Maintain a project learning log only when requested or already authorized; record sticking points and useful hints. One correct answer does not establish comprehensive mastery. Show the original image when teaching a figure/table.
+Mentor-led reading is the default interaction for reading and analysis requests. Follow [guided-reading.md](guided-reading.md) for one-unit dialogue, adaptive feedback, conversation-derived research ideas and corpus, progress tracking, and the note-generation gate. Use batch delivery only for an explicit direct-output request. Use inspected figure/table crops when teaching visuals.
 
 ## Full English–Chinese parallel reading
 

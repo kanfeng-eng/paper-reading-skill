@@ -1,7 +1,7 @@
 # Paper title | Core scientific question
 
 > Mode: deep / extend. Source and version: actual source. Reading scope: main text / supplements / unread material.
-> Template guidance: use this only for saved deep/extend notes; quick/focused chat does not need this template. Translate headings, retain relevant sections, and remove instructions before delivery. Reuse the same checked records for evidence JSON and HTML.
+> Template guidance — consolidate after the agreed guided-reading scope is complete, or label an explicitly requested partial note. Write detailed standalone explanations, including actual questions, corrections and discussion-derived research/corpus results. Use figure/table-region crops. Translate headings and remove scaffold instructions.
 
 ## 1. Core assessment and reading scope
 
@@ -11,7 +11,7 @@ One-sentence conclusion, core design, strongest evidence, boundary, and actual r
 
 Prior knowledge → gap → hypothesis → design → key evidence → boundary.
 
-## 3. Key design decisions
+## 3. Problem discovery, solution rationale, and key design decisions
 
 ### D01 — A consequential choice
 
@@ -21,7 +21,7 @@ Problem, selected approach, author rationale or analyst inference, alternative, 
 
 ### Figure 1 — The question this figure answers
 
-Insert the actual original-image embed here before explaining the figure; replace this instruction. Example syntax only:
+Insert the inspected original figure-region crop here before explaining the figure. Preserve all relevant panels, axes, units, legends, and caption. Full paper pages are internal locating material.
 
 ```markdown
 ![Original Figure 1, all relevant panels and caption](assets/figures/fig-1.png)
@@ -55,7 +55,7 @@ What remains unresolved and why the next analysis is needed.
 
 ### Table 1 — The comparison this table supports
 
-Insert the original table image, preserving headers, units, all parts, footnotes, and caption. Include the actual source locator, then explain comparison conditions, results, and limits. Remove this item if the paper has no relevant table. Repeat the image-first structure for every individually explained figure/table.
+Insert an inspected crop of the table with headers, units, footnotes and caption. Split a large table into ordered readable crops. Explain comparison conditions, results and limits. Follow the same crop-first rule for every individually explained table.
 
 For theory, replace the figure/table section with key propositions, assumptions, proof steps, and counterexamples; keep source visuals where helpful.
 
@@ -79,11 +79,11 @@ Alternative explanations, missing controls, unread material, OCR/visual limitati
 
 ## 8. Future research insights
 
-Retain by default for deep/extend unless the user excludes extensions. Select grounded directions, not a fixed number. For each: checked result/gap and source/E IDs → transferable insight or hypothesis → scientific value → applicability and failure conditions → next question. Distinguish author suggestions from analyst proposals; do not claim unchecked novelty.
+Consolidate the directions actually developed in conversation. Record evidence/gap → insight → user interpretation or question → discussion revision → applicability and failure conditions → next test. Identify author suggestions, AI proposals and learner ideas, with discussion status. Mark skipped or undiscussed topics.
 
 ## 9. Next-step research plan
 
-Retain by default for deep. In extend, develop this into the prioritized roadmap below instead of duplicating it. Lead with the first useful action and why it comes first. Link substantive proposals to A IDs and evidence; state the method/control, required resources, deliverable, supporting/weakening outcomes, and next decision. Without project context, label the plan general and state adaptation assumptions.
+Summarize the next-step plan developed with the learner. Preserve the hypothesis, alternatives, rationale for priority, method/control, resources, supporting/weakening outcomes and next decision. Retain unresolved assumptions and user constraints. In extend, expand the agreed roadmap without inventing a completed discussion.
 
 | Priority / stage | Question and method | Resources / prerequisites | Deliverable | Decision and next step |
 |---|---|---|---|---|
@@ -110,6 +110,14 @@ Gap and E IDs, hypothesis, method, controls, supporting/weakening outcomes, reso
 
 Retain for extend; deep normally uses its compact next-step plan. Order A cards into stages with dependencies, milestones, deliverables, and stop/pivot conditions. State the first concrete task. Give calendar estimates only when useful and grounded in stated assumptions.
 
-## 14. Sources and reading record
+## 14. Guided-reading questions and conceptual corrections
+
+Record substantive questions actually raised, the learner's relevant explanations, feedback, necessary examples or derivations, and the revised reasoning with evidence. Mark unresolved points and distinguish source-preparation coverage from discussion coverage.
+
+## 15. Argument and expression corpus from the dialogue
+
+Consolidate actual excerpts discussed, source locations, user interpretation or rewrite, feedback, keyword logic, reusable patterns, usage conditions, stable IDs and discussion status. Link to the cumulative corpus.
+
+## 16. Sources and reading record
 
 Version, completed coverage, external background, and source-block locations. Renumber retained sections after adapting the template.

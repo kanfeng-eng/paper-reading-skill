@@ -2,13 +2,13 @@
 
 ## Efficiency by task
 
-Treat the stages below as a guide, not three mandatory complete rereads. quick uses the overall-picture stage and targeted checks, then a compact insight and next step; focused follows only the requested item and necessary context. deep covers the full main research storyline, relevant main figures, and decisive methods, then future research insights and a practical next-step plan. extend adds project transfer, detailed actions, and a staged roadmap using the necessary deep evidence; it does not automatically require new experiments or a duplicate whole-paper report.
+These stages guide source preparation and reading depth. The default learner-facing interaction follows [guided-reading.md](guided-reading.md). Read ahead internally only as needed, teach one unit at a time, and wait for the learner's response. Final detailed HTML notes follow completion of the agreed dialogue scope; explicit direct-output requests can use batch delivery.
 
 Load only the references relevant to the mode. Consult script implementation only when execution fails or behavior is unclear. For a supplied full-text paper, use its contents before searching externally. Check relevant supplements when they affect a conclusion; broad novelty verification, whole-reference-list discovery, repository audits, and full translation are separate tasks unless requested. Limit any unverified novelty statement accordingly.
 
 Reuse source text, image renders, and evidence after checking paper identity/version, fingerprint where available, and actual coverage. Existing images still require inspection if no reliable inspection record/context exists. Track pending pages/items so reuse never conceals omissions. Do not create saved artifacts for a chat-only answer.
 
-For a lengthy deep/extend task, report a brief initial overview once enough source text supports it, stating what is author-reported versus already checked and what remains. Continue to the requested completion without asking the user whether to proceed. If only an abstract is available, label the overview accordingly and do not pretend the whole paper was read.
+During guided reading, orient the learner briefly, then begin the first source-grounded unit. Keep source-preparation coverage separate from the learner's discussion progress. A progress overview is not permission to bypass the reading dialogue or finalize notes.
 
 ## 1. Source and reading scope
 
@@ -33,7 +33,7 @@ Read the abstract, key introduction gap, principal results, and conclusion; insp
 
 For deep/extend, inspect figures, tables, experiments, or propositions that determine the central conclusions, then read the necessary methods. For quick, verify only the results used in the concise summary; for focused, stop once the local question and boundary are supported. Record observations, IDs, and source locations during this reading instead of rebuilding them afterward. Use D IDs for important design choices and C/E IDs for claims/evidence. Explain module inputs, operations, outputs, connections, and why they may work rather than defining module names alone.
 
-Capture a complete original image for every individually explained figure/table and place it before that item's analysis. Batch known figure-bearing pages at default DPI and inspect them once. Use a readable full page as the original when sufficient; confirm a crop or increase DPI only to resolve a specific readability/completeness problem. Preserve captions and panel coverage. See [figure-and-equation-reading.md](figure-and-equation-reading.md). If image retrieval or inspection fails, disclose the limitation locally and in the reading scope.
+Locate each figure/table on a full-page render internally, then create and inspect a figure-region crop for display. Preserve its caption, panels, axes, units, legends, headers, and footnotes. Use multiple ordered crops for large tables. Entire page screenshots are not delivered as figures. Follow [figure-and-equation-reading.md](figure-and-equation-reading.md); disclose missing crops rather than substituting a full page.
 
 Check controls, metrics, statistical units, independent validation, data leakage, assumptions, and proof conditions according to [paper-types.md](paper-types.md). Actually read necessary supplements; if unavailable, retain the gap.
 
@@ -45,7 +45,7 @@ Write evidence cards for central claims: source, experiment/derivation, observat
 
 ## 5. Future research insights and planning
 
-For whole-paper deep analysis, add distinct future-insights and next-step-plan sections by default. Quick gives a compact insight and first check; respect summary-only and focused scope. Follow [future-research-planning.md](future-research-planning.md) for deep/extend. Derive transferable principles and testable questions from checked contributions and gaps, not only from the authors' future-work paragraph. Prioritize the smallest useful check, give its method/control, supporting and weakening outcomes, resources, and deliverable, then link later work to that decision. Without a user project, label the plan general and state adaptation assumptions. Extend expands action cards and the roadmap and retains separate transfer conditions and reproduction checklist sections where relevant. Proposed planning does not authorize executing the work.
+Discuss future insights and the next-step plan with the learner while reading the relevant evidence and limitations. Follow [future-research-planning.md](future-research-planning.md) and preserve the origin and discussion state of ideas. Form hypotheses, controls, outcome criteria, resources, and priorities in conversation; final notes consolidate these results and mark undiscussed topics. Explicit batch delivery labels AI proposals clearly.
 
 ## 6. Verification and continued reading
 

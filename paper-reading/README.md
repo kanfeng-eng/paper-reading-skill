@@ -15,8 +15,10 @@ It can produce a quick overview, a full close reading, a reproduction-oriented a
 上传论文 PDF 或提供论文链接，并在请求中写出技能名和希望的阅读深度。
 Upload the paper PDF or provide a paper link, and name the skill and desired reading depth in your request.
 
-例如，输入“使用 `$paper-reading` 精读这篇论文，重点解释图 2 和研究设计”。
-For example, ask “Use `$paper-reading` for a close reading of this paper, focusing on Figure 2 and the study design.”
+例如，输入“使用 `$paper-reading` 像严谨耐心的 AI 研究导师一样带我精读这篇论文，每轮围绕一个关键问题，读完后生成详细 HTML 笔记”。
+For example, ask for mentor-led dialogue one reading unit at a time, followed by detailed HTML notes after the agreed scope is complete.
+
+完整调用提示词见 [导师式精读提示词](assets/guided-reading-prompt.md)，互动流程见 [带读规范](references/guided-reading.md)。默认在对话中共同形成研究启示、下一步计划和论证表达语料，完成阅读后再汇总。笔记详细解释逻辑、方法、公式、证据和关键问答；图表使用经过检查的区域裁剪或原始单图。
 
 | 阅读方式 / Mode | 适用请求 / When to use | 主要内容 / Main content |
 | --- | --- | --- |
@@ -33,8 +35,8 @@ A close reading explains key design choices, original figures, and necessary equ
 解释单张图时，结果会说明图的用途、阅读顺序、各面板的观察结果及其支持的结论。
 For a single figure, the response explains its purpose, reading order, panel observations, and supported conclusions.
 
-定制技能默认交付可离线打开的 HTML 笔记，同时维护项目语料库。用户可以指定输出目录和其他格式。
-The customized skill defaults to offline HTML notes and maintains a project-local corpus. Users can specify another output directory or format.
+定制技能默认先互动带读，在完成约定阅读与讨论后交付详细 HTML 笔记，并汇总项目语料库。用户明确要求直接总结、阶段笔记或其他格式时按其请求执行。
+The skill defaults to guided dialogue, then detailed offline HTML notes and corpus consolidation after reading. Explicit direct-output or partial-note requests take priority.
 
 ## 本地命令 / Local commands
 
@@ -84,3 +86,4 @@ python -m unittest discover -s tests -v
 - [Jason Eisner 的 How to Read a Technical Paper](https://www.cs.jhu.edu/~jason/advice/how-to-read-a-paper.html)，用于自己的解释、理解难点和知识联系。
 - [Michael Nielsen 的 Augmenting Long-term Memory](https://augmentingcognition.com/ltm.html)，用于带上下文、来源和主张归属的复习提问。
 - [frontend-design 包内规则](vendor/frontend-design/SKILL.md)及其 [Apache-2.0 许可证](vendor/frontend-design/LICENSE.txt)，用于 HTML 设计与检查。
+- [安特卫普大学的 Socratic method 教学建议](https://www.uantwerpen.be/en/centres/centre-expertise-higher-education/didactic-information/teaching-tips/activating-students/socratic-method/)，用于提问后等待、依据回答给提示和调整问题层级。

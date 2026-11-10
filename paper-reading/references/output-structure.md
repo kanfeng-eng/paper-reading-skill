@@ -1,10 +1,10 @@
-# Report structure
+# Detailed note consolidation after reading
 
 ## Prominent report headings
 
 Use one `#` report title. Put each major output under its own `##` heading with blank lines around it. Use `###` for individual figures, tables, theorems, decisions, claims, or actions; use `####` for explanatory questions inside an item. Bold inline labels may identify fields but must not substitute for major headings. In HTML, keep the main sections visually distinct and include them in the table of contents.
 
-The following outlines name the main outputs, not mandatory filler. Translate their headings into the user's report language, adapt them to paper type, and omit unsupported or irrelevant material with an explanation where it affects coverage. Do not present the four modes as four report sections; use the outline for the selected task.
+The outlines below organize the detailed final notes after the agreed reading dialogue is complete. Follow [guided-reading.md](guided-reading.md) for live interaction and progress. Consolidate only actual discussion-derived research insights and corpus items, labeling their states. An explicit direct-output or partial-note request defines its own scope.
 
 ### quick
 
@@ -24,9 +24,9 @@ Use a clear `##` heading naming the requested figure, table, equation, or passag
 
 ## Deliver the useful content early
 
-For an unqualified summary request, use quick. Give a concise paragraph or short list under each relevant heading, with decisive results, conditions, source locations, and a compact future insight/next step unless excluded. For an unqualified whole-paper analysis request, use deep with future insights and a next-step plan. Keep quick concise, with detailed derivations and full evidence records reserved for the requested scope. HTML delivery follows html-output.md. A separately explained figure/table still requires its original image.
+An explicit brief summary can use quick. Unqualified whole-paper reading/analysis starts guided deep reading. The final report follows the completed dialogue scope, including discussed future insights and plans with their actual status. Explicit batch requests can deliver the requested report directly. HTML delivery follows html-output.md; individually explained figures use inspected region crops.
 
-In lengthy deep/extend work, give a short, source-grounded initial overview before image refinement, evidence serialization, or packaging. State coverage and whether results are only author-reported; continue all requested reading in the same task. The final report still contains the required detailed sections and original visuals. If the user requests a single saved report, place the concise overview first in that report and keep progress commentary brief.
+In guided work, teach one source unit and wait for the learner's response. After the completion gate is met, assemble detailed final notes with the full reasoning chain, necessary derivations, meaningful questions and corrections, and the research-plan and corpus discussion results. Explicit batch delivery may provide progress updates while completing its requested report.
 
 Explain each result thoroughly once and use C/E/D/A cross-references in subsequent cards instead of repeating whole explanations. Group similar panels while naming coverage. Avoid repeating definitions and generic caveats. Build saved Markdown/evidence and requested HTML from the same checked content; do not independently rewrite the scientific analysis for each format. Run the note validator after content/assets are ready, not after every paragraph or image.
 
@@ -34,11 +34,11 @@ Explain each result thoroughly once and use C/E/D/A cross-references in subseque
 
 For every figure or table explained individually, embed the original source image in that item's section before the analysis. Include a source line giving figure/table number, panel coverage, PDF page or web locator, and source-block ID when available. Figures and tables discussed only as brief cross-references do not need duplicate images; link to their explanation instead. All substantially explained main figures/tables need an image or an explicit local missing-image disclosure.
 
-For saved notes, keep images inside the note output directory, such as `assets/figures/fig-1.png`, and use relative Markdown links. For chat, use the host's native image display or an absolute local path that actually renders; filenames alone are insufficient. For multipage tables or figures, show all parts in order. Do not replace source images with recreated charts or tables. See [figure-and-equation-reading.md](figure-and-equation-reading.md) for capture and inspection rules.
+For saved notes, use inspected figure/table-region crops such as assets/figures/fig-1.png, and embed them in HTML. Preserve all panels and captions, splitting large tables into ordered readable parts. Full-page renders remain internal locating assets. Follow [figure-and-equation-reading.md](figure-and-equation-reading.md).
 
 ## Delivery and verification
 
-quick/focused can be answered directly. Saved deep/extend notes include evidence JSON; comparisons identify each paper's sources and IDs. If extend yields no viable action, explain why and record `action_status` rather than inventing one.
+An explicit direct quick/focused explanation can remain conversational. Guided requests retain their turn-by-turn interaction. Final deep/extend notes include evidence JSON; comparisons identify each paper's sources and IDs. If no viable action emerged from the discussion, explain the gap and record action_status.
 
 ```text
 "<reader-executable>" validate "<output>/reading-note.md" --mode deep --evidence "<output>/evidence.json" --source-map "<output>/source/source_map.json"

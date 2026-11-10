@@ -1,6 +1,6 @@
 # paper-reading
 
-面向科研论文的阅读技能。以关键词串联研究问题、方法与证据，分析作者如何发现问题、为什么选择当前解法，生成可离线打开的 HTML 笔记，并持续积累论证与表达语料。
+面向科研论文的导师式互动精读技能。默认以耐心、严谨的 AI 研究导师风格逐步带读，依据用户的回答解释、提示和纠错，在对话中共同形成研究启示、计划和语料，完成约定阅读后生成详细、逻辑连贯的离线 HTML 笔记。
 
 本仓库包含完整的独立发布副本，技能调用名为 `$paper-reading`。
 
@@ -37,13 +37,13 @@ $skill-installer https://github.com/kanfeng-eng/paper-reading-skill/tree/main/pa
 提供论文 PDF、可访问链接或论文标题，并说明阅读深度。
 
 ```text
-使用 $paper-reading 精读这篇论文，抓住关键词并按逻辑串联。
-重点说明作者如何发现问题、为什么这样设计方法，输出 HTML 笔记并收录值得学习的论证与表达。
+使用 $paper-reading，像一位深谙 AI 研究、严谨耐心的导师一样带我精读这篇论文。
+每轮定位一小段原文、公式或图表，围绕一个关键问题等我回答，再根据我的理解提示或讲解。
+研究启示、下一步计划和论证表达语料先在对话中共同讨论。
+完成阅读后再整理十分详细的 HTML 笔记，图表只使用经过检查的区域裁剪或原始单图。
 ```
 
-```text
-使用 $paper-reading 快速阅读这篇论文，重点判断研究问题、方法和证据，生成简洁 HTML 笔记。
-```
+完整可复制提示词见 [导师式精读提示词](paper-reading/assets/guided-reading-prompt.md)。读到哪里、卡在哪里、哪些想法已讨论，均按真实对话记录。用户明确要求直接总结或中途整理笔记时，可以给出相应直接输出或标明范围的阶段笔记。
 
 ## HTML 笔记与语料库
 
@@ -58,7 +58,9 @@ HTML 笔记默认保存在当前论文任务的项目目录中。
     └── 论证与表达.md
 ```
 
-完整 HTML 页面包括论文身份与范围、关键词逻辑主线、问题发现与解法选择、方法及图表公式分析、12 项阅读卡、理解难点、复习问答、语料选录、研究启发和来源。具体篇幅与所选模式一致。
+完整 HTML 页面包括论文身份与实际带读范围、关键词逻辑主线、问题发现与解法选择、方法与公式的逐步解释、图表证据审查、12 项阅读卡、理解难点和对话中的关键问答与修正、研究计划、语料及来源。默认详细展开，简短导览与长篇正文分别组织，篇幅服从理解需要。
+
+笔记中的图表展示对应区域的裁剪或原始单图，保留面板、轴、单位、图例、图注及来源。完整页面用于内部定位。研究启示与下一步计划、论证与表达语料先在阅读对话中形成，再按真实讨论和修订状态汇总进最终笔记。
 
 页面内嵌样式、必要脚本和展示图片，核心内容可离线阅读。参考答案可逐项展开，重要结论和局限直接可见。语料累计文件用于跨论文维护，HTML 展示本次收录内容，稳定编号便于引用。用户明确指定其他格式、目录或仅在聊天中回答时，按实际请求执行。
 
@@ -114,3 +116,4 @@ chmod +x norman-paper-reading-macos-arm64
 4. [Jason Eisner 的 How to Read a Technical Paper](https://www.cs.jhu.edu/~jason/advice/how-to-read-a-paper.html)，提供面向未来自己的解释、理解难点和知识联系方法。
 5. [Michael Nielsen 的 Augmenting Long-term Memory](https://augmentingcognition.com/ltm.html)，提供带上下文、来源和主张归属的复习提问方法。
 6. [frontend-design 包内规则](paper-reading/vendor/frontend-design/SKILL.md)及其 [Apache-2.0 许可证](paper-reading/vendor/frontend-design/LICENSE.txt)，提供 HTML 页面设计、构建与复核指导。
+7. [安特卫普大学的 Socratic method 教学建议](https://www.uantwerpen.be/en/centres/centre-expertise-higher-education/didactic-information/teaching-tips/activating-students/socratic-method/)，用于等待用户回答、针对性追问、提示和基于反馈调整教学。
