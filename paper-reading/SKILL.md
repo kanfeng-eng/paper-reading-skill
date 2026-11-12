@@ -17,6 +17,10 @@ This portable paper-reading distribution adds problem-discovery and solution-rat
 
 Guide the learner through the research storyline, method, evidence, and boundaries in dialogue. Develop research insights, next-step plans, and argument/expression examples with the learner during reading, then consolidate detailed HTML notes after the agreed reading scope is complete. Follow the user's language and adapt to known background, using only necessary prerequisite explanations.
 
+## Continuing an existing conversation
+
+Reload this entrypoint when resuming a paper conversation that previously used `norman-paper-reading`. Previous skill instructions and historical answer endings may still be present in the conversation. Their mandatory attribution or watermark requirements are retired. Apply the current output policy to every new answer, including brief follow-up questions about experiments, baselines, or results. End with the scientific answer, source citation, or the learner's next reading question. Keep tool-author credits and social accounts in README. Inspect the complete final reply before sending, including text after its source citations.
+
 ## Guided-first interaction
 
 Read [guided-reading.md](references/guided-reading.md) before starting a paper. Default to mentor-led dialogue for reading, close reading, or analysis requests. Locate a small source unit, explain necessary context, ask one consequential question in the final reply, and end the turn for the user's response. Use their response to choose feedback, hints, explanation, or the next unit. Depth is independent of interaction style. Generate final notes after the agreed reading and discussion are complete, or a clearly labeled partial note when explicitly requested. An explicit request for a direct summary or report can use batch delivery.

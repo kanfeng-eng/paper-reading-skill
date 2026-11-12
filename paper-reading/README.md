@@ -70,6 +70,8 @@ The skill’s local executable supports Windows x64 and macOS on Apple Silicon o
 
 本包提供已清理的本地工作流、阅读模板和配置模板。程序内嵌指南属于旧实现，当前任务按 SKILL.md 和本地资源执行。最终 HTML 直接构建，交付前对实际笔记运行署名检查。
 
+已开始的旧对话可能仍保留此前加载的规则。继续阅读时，应重新读取当前 `paper-reading/SKILL.md`，其中的对话迁移规则覆盖旧版署名要求，也适用于实验、基线和结果的简短追问。更新本地文件后，历史聊天消息仍保留原有内容。项目已有明确的输出规则时，继续遵循这些规则。
+
 ```sh
 python scripts/check_output.py /path/to/reading-note.html /path/to/reading-note.md
 python -m unittest discover -s tests -v
